@@ -101,7 +101,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
     color: #555;
 
@@ -117,6 +117,20 @@ export default {
 
       p {
         line-height: 1.2;
+
+        &:first-child {
+          font-size: 0.7rem;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          font-size: 1.3rem;
+        }
+      }
+
+      .btn {
+        font-size: 0.8rem;
       }
 
       .icon-love-letter {
@@ -150,9 +164,14 @@ export default {
   }
 
   p {
+    font-size: 0.8rem;
     margin: 0 auto;
-    width: 85%;
+    width: 70%;
     text-align: center;
+  }
+
+  small {
+    font-size: 0.7rem;
   }
 }
 
@@ -171,7 +190,7 @@ export default {
 
 .nama-penerima {
   font-family: "Dancing Script", cursive;
-  font-size: 1.6rem;
+  font-size: 1.3rem !important;
 }
 
 .fade-enter-active,
