@@ -9,7 +9,7 @@
 
         <button
           class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
-          @click="show = true"
+          @click="onClickBukaUndangan"
         >
           <img src="@/assets/love-letter.png" class="icon-love-letter" />
           Buka Undangan
@@ -18,6 +18,12 @@
     </div>
   </div>
   <div class="main">
+    <button @click="onClickMuted" class="btn btn-muted">
+      <i class="fas" :class="[!muted ? 'fa-volume-up' : 'fa-volume-mute']"></i>
+    </button>
+    <audio id="audio" loop>
+      <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
+    </audio>
     <!-- <img src="@/assets/decoration-2.png" class="decoration-header" alt="" /> -->
     <div class="content p-1">
       <p class="mb-0">Assalamu`alaikum</p>
@@ -68,12 +74,26 @@
 </template>
 
 <script>
+// path to file
 export default {
   name: "App",
   data() {
     return {
       show: false,
+      muted: false,
     };
+  },
+  methods: {
+    onClickBukaUndangan() {
+      this.show = true;
+      const audio = document.getElementById("audio");
+      audio.play();
+    },
+    onClickMuted() {
+      const audio = document.getElementById("audio");
+      this.muted = !this.muted;
+      audio.muted = this.muted;
+    },
   },
 };
 </script>
@@ -201,5 +221,20 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
   transform: translateY(-100%);
+}
+
+.btn-muted {
+  position: fixed;
+  bottom: 40%;
+  right: 0;
+  outline: none;
+
+  &:active {
+    border: none;
+  }
+
+  &:focus {
+    border: none;
+  }
 }
 </style>
