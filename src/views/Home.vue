@@ -1,5 +1,8 @@
 <template>
   <div class="screen-wrapper" :class="[show ? 'show' : '']">
+    <audio id="audio" loop>
+      <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
+    </audio>
     <div class="card-wrapper fw-bold">
       <div class="card text-center">
         <p>Kepada Yth. <br />Bapak/Ibu/Saudara/i</p>
@@ -17,33 +20,45 @@
       </div>
     </div>
   </div>
-  <div class="main">
-    <button @click="onClickMuted" class="btn btn-muted">
-      <i class="fas" :class="[!muted ? 'fa-volume-up' : 'fa-volume-mute']"></i>
-    </button>
-    <audio id="audio" loop>
-      <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
-    </audio>
-    <!-- <img src="@/assets/decoration-2.png" class="decoration-header" alt="" /> -->
-    <div class="content p-1">
-      <p class="mb-0">Assalamu`alaikum</p>
-      <p class="mb-0">Warahmatullaahi Wabarakaatuh</p>
-      <p class="mt-3 mb-0">
-        Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
-        Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan putra-putri
-        kami:
-      </p>
-      <p class="nama-penerima mt-3 mb-0">Saharuddin, M.Clin.Farm.</p>
-      <small class="d-block mt-3 mb-0">Putra xxxxx dari</small>
-      <small class="d-block mb-0">Bapak Anwar (Alm.)</small>
-      <small class="d-block mb-0">& Ibu Hj. Sinar</small>
+  <div class="main" v-if="show">
+    <div class="main-header">
+      <div class="content flex-grow-1 p-1">
+        <p class="mb-0">Official Invitation</p>
+        <p class="nama-penerima-sm mt-1">The Wedding of</p>
+        <p class="nama-penerima-lg mt-2">Saharuddin</p>
+        <p class="nama-penerima-lg mt-2">&</p>
+        <p class="nama-penerima-lg mt-2">Septiza</p>
+        <p class="mt-3">Minggu, 26 Desember 2021</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <button @click="onClickMuted" class="btn btn-muted">
+        <i
+          class="fas"
+          :class="[!muted ? 'fa-volume-up' : 'fa-volume-mute']"
+        ></i>
+      </button>
+      <!-- <img src="@/assets/decoration-2.png" class="decoration-header" alt="" /> -->
+      <div class="content p-1">
+        <p class="mb-0">Assalamu`alaikum</p>
+        <p class="mb-0">Warahmatullaahi Wabarakaatuh</p>
+        <p class="mt-3 mb-0">
+          Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.
+          Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan putra-putri
+          kami:
+        </p>
+        <p class="nama-penerima mt-3 mb-0">Saharuddin, M.Clin.Farm.</p>
+        <small class="d-block mt-3 mb-0">Putra xxxxx dari</small>
+        <small class="d-block mb-0">Bapak Anwar (Alm.)</small>
+        <small class="d-block mb-0">& Ibu Hj. Sinar</small>
 
-      <p class="nama-penerima my-3">- & -</p>
+        <p class="nama-penerima my-3">- & -</p>
 
-      <p class="nama-penerima mb-0">Septina Azrida, Amd.Farm., Apt.</p>
-      <small class="d-block mt-3 mb-0">Putri xxxxx dari</small>
-      <small class="d-block mb-0">Bapak Darmansyah A, S.P.</small>
-      <small class="d-block mb-0">& Ibu Rosmalaina, S.Pd.</small>
+        <p class="nama-penerima mb-0">Septina Azrida, Amd.Farm., Apt.</p>
+        <small class="d-block mt-3 mb-0">Putri xxxxx dari</small>
+        <small class="d-block mb-0">Bapak Darmansyah A, S.P.</small>
+        <small class="d-block mb-0">& Ibu Rosmalaina, S.Pd.</small>
+      </div>
     </div>
     <!-- <img src="@/assets/decoration-3.png" class="decoration-footer" alt="" /> -->
     <!-- <div class="main"> -->
@@ -165,11 +180,6 @@ export default {
   position: absolute;
   z-index: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: url("../assets/background-3.jpg") no-repeat center center/cover;
 
   .decoration-header {
     position: absolute;
@@ -193,6 +203,19 @@ export default {
   small {
     font-size: 0.7rem;
   }
+
+  .main-header,
+  .main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/background-3.jpg") no-repeat center center/cover;
+
+    .content {
+      width: 80%;
+    }
+  }
 }
 
 .btn-primary {
@@ -211,6 +234,16 @@ export default {
 .nama-penerima {
   font-family: "Dancing Script", cursive;
   font-size: 1.3rem !important;
+}
+
+.nama-penerima-sm {
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem !important;
+}
+
+.nama-penerima-lg {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.7rem !important;
 }
 
 .fade-enter-active,
