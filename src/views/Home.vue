@@ -3,34 +3,48 @@
     <audio id="audio" loop>
       <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
     </audio>
-    <div class="card-wrapper fw-bold">
-      <div class="card text-center">
-        <p>Kepada Yth. <br />Bapak/Ibu/Saudara/i</p>
-        <p class="nama-penerima mb-0">Messy Triandani</p>
-        <p class="nama-penerima my-0">&</p>
-        <p class="nama-penerima mt-0">Partner</p>
-
+    <div class="card-wrapper">
+      <div class="text-center">
+        <p class="fade-in-top text-md text-uppercase text-roboto fw-light">
+          Undangan Pernikahan
+        </p>
+        <p class="scale-in-bottom text-xl text-honey-carrot">
+          Septina & Saharuddin
+        </p>
+        <p class="fade-in-bottom text-sm text-roboto fw-light">
+          <i class="fas fa-heart text-danger"></i> Minggu, 26 Desember 2021
+          <i class="fas fa-heart text-danger"></i>
+        </p>
+        <div class="scale-in-bottom-1">
+          <p class="text-md">Dear</p>
+          <p class="text-md">Messy Triandani</p>
+        </div>
         <button
-          class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+          class="btn btn-primary btn-sm blink-1 badge rounded-pill"
+          style="visibility:hidden;"
           @click="onClickBukaUndangan"
+          id="btn-undangan"
         >
           <img src="@/assets/images/love-letter.png" class="icon-love-letter" />
           Buka Undangan
         </button>
       </div>
     </div>
-  </div>
-  <div class="main" v-if="show">
-    <div class="main-header">
-      <div class="content flex-grow-1 p-1">
-        <p class="mb-0">Official Invitation</p>
-        <p class="nama-penerima-sm mt-1">The Wedding of</p>
-        <p class="nama-penerima-lg mt-2">Saharuddin</p>
-        <p class="nama-penerima-lg mt-2">&</p>
-        <p class="nama-penerima-lg mt-2">Septina</p>
-        <p class="mt-3">Minggu, 26 Desember 2021</p>
+
+    <div class="main" v-if="show">
+      <div class="main-header">
+        <div class="content flex-grow-1 p-1">
+          <p class="mb-0">Official Invitation</p>
+          <p class="nama-penerima-sm mt-1">The Wedding of</p>
+          <p class="nama-penerima-lg mt-2">Saharuddin</p>
+          <p class="nama-penerima-lg mt-2">&</p>
+          <p class="nama-penerima-lg mt-2">Septina</p>
+          <p class="mt-3">Minggu, 26 Desember 2021</p>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="main" v-if="show">
     <div class="main-content">
       <button @click="onClickMuted" class="btn btn-muted">
         <i
@@ -60,7 +74,7 @@
         <small class="d-block mb-0">& Ibu Rosmalaina, S.Pd.</small>
       </div>
     </div>
-    <div class="main-event">
+    <!-- <div class="main-event">
       <div class="content">
         <p class="nama-penerima-lg mt-1">Event</p>
         <p class="mt-2">
@@ -820,6 +834,52 @@
           </button>
         </div>
       </div>
+    </div> -->
+  </div>
+
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-primary d-none"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+    id="buttonProtokol"
+  >
+    Launch static backdrop modal
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="text-lg">Protokol Kesehatan (Covid-19)</p>
+          <p class="text-sm">
+            Demi mendukung kesehatan bersama alangkah baiknya para tamu yang
+            akan hadir memenuhi protokol kesehatan sebagai berikut:
+          </p>
+          <img
+            src="@/assets/images/prokes-covid.jpg"
+            alt="Prokes Covid 19"
+            style="width: 100%;"
+          />
+          <button
+            type="button"
+            class="btn btn-primary text-sm mt-4"
+            data-bs-dismiss="modal"
+          >
+            Baik, Saya mengerti
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -837,6 +897,8 @@ export default {
   methods: {
     onClickBukaUndangan() {
       this.show = true;
+
+      document.getElementById("buttonProtokol").click();
       const audio = document.getElementById("audio");
       audio.play();
     },
@@ -846,11 +908,17 @@ export default {
       audio.muted = this.muted;
     },
   },
+  created() {
+    setTimeout(function() {
+      document.getElementById("btn-undangan").style.visibility = "visible";
+    }, 1500);
+  },
 };
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("http://fonts.cdnfonts.com/css/honey-carrot");
 
 * {
   font-family: "Ubuntu", sans-serif;
@@ -876,38 +944,13 @@ export default {
     margin: 0 auto;
     color: #555;
 
-    .card {
-      width: 100%;
-      margin-top: -70px;
-      padding: 50px;
-      backdrop-filter: blur(5px) saturate(180%);
-      -webkit-backdrop-filter: blur(5px) saturate(180%);
-      background-color: rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      border: 1px solid rgba(209, 213, 219, 0.3);
+    .btn {
+      font-size: 0.8rem;
+    }
 
-      p {
-        line-height: 1.2;
-
-        &:first-child {
-          font-size: 0.7rem;
-        }
-
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4) {
-          font-size: 1.3rem;
-        }
-      }
-
-      .btn {
-        font-size: 0.8rem;
-      }
-
-      .icon-love-letter {
-        height: 16px;
-        margin-right: 10px;
-      }
+    .icon-love-letter {
+      height: 16px;
+      margin-right: 10px;
     }
   }
 }
@@ -992,23 +1035,28 @@ export default {
   }
 }
 
-.nama-penerima {
-  font-family: "Dancing Script", cursive;
-  font-size: 1.3rem !important;
+.text-honey-carrot {
+  font-family: "Honey Carrot", sans-serif;
 }
 
-.nama-penerima-sm {
-  font-family: "Dancing Script", cursive;
-  font-size: 1rem !important;
+.text-roboto {
+  font-family: "Roboto", sans-serif;
 }
 
-.nama-penerima-lg {
-  font-family: "Dancing Script", cursive;
-  font-size: 1.7rem !important;
+.text-sm {
+  font-size: 0.8rem !important;
 }
 
 .text-md {
-  font-size: 0.8rem;
+  font-size: 1rem !important;
+}
+
+.text-lg {
+  font-size: 1.6rem !important;
+}
+
+.text-xl {
+  font-size: 2.2rem !important;
 }
 
 .fade-enter-active,
@@ -1033,6 +1081,147 @@ export default {
 
   &:focus {
     border: none;
+  }
+}
+
+.fade-in-top {
+  -webkit-animation: fade-in-top 1s ease-in-out 0.8s both;
+  animation: fade-in-top 1s ease-in-out 0.8s both;
+}
+
+.scale-in-bottom {
+  -webkit-animation: scale-in-bottom 1s ease-in-out 1s both;
+  animation: scale-in-bottom 1s ease-in-out 1s both;
+}
+
+.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 1s ease-in-out 1.3s both;
+  animation: fade-in-bottom 1s ease-in-out 1.3s both;
+}
+
+.scale-in-bottom-1 {
+  -webkit-animation: scale-in-bottom 1s ease-in-out 1.4s both;
+  animation: scale-in-bottom 1s ease-in-out 1.4s both;
+}
+
+.blink-1 {
+  -webkit-animation: blink-1 4s infinite 0.8s both;
+  animation: blink-1 4s infinite 0.8s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-2 1:3:35
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
   }
 }
 </style>
