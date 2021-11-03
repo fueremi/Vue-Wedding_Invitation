@@ -508,10 +508,23 @@ export default {
     height: 100vh;
 
     .card-ucapan-wrapper {
-      height: 340px;
+      height: 180px;
       overflow-y: scroll;
       width: 80%;
       margin: 0 auto;
+
+      @media (min-height: 540px) {
+        height: 250px;
+      }
+
+      @media (min-height: 720px) {
+        height: 300px;
+      }
+
+      @media (min-height: 780px) {
+        height: 400px;
+      }
+
       .card-ucapan {
         width: 90%;
         padding: 10px 20px;
