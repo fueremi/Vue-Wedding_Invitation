@@ -125,7 +125,6 @@
           alt=""
         />
       </div>
-      .
       <p class="text-lg text-honey-carrot text-primary mt-3">
         Septina Azrida, Amd.Farm.
       </p>
