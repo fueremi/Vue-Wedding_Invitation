@@ -918,7 +918,7 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap");
-@import url("http://fonts.cdnfonts.com/css/honey-carrot");
+@import url("https://fonts.cdnfonts.com/css/honey-carrot");
 
 * {
   font-family: "Ubuntu", sans-serif;
