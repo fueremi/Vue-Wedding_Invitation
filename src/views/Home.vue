@@ -35,7 +35,7 @@
     </div>
   </div>
   <div class="main" v-if="show">
-    <div class="main-content">
+    <div class="main-content pb-5">
       <button @click="onClickMuted" class="btn btn-muted">
         <i
           class="fas"
@@ -66,6 +66,10 @@
       </div>
 
       <div class="main-content-hari">
+        <p class="text-sm text-roboto">Pernikahan dari:</p>
+        <p class="text-lg text-primary text-honey-carrot">
+          Setpina & Saharuddin
+        </p>
         <p class="text-sm">
           Kami harap Anda menjadi bagian dari hari istimewa kami!
         </p>
@@ -99,8 +103,8 @@
         </div>
       </div>
     </div>
-    <div class="main-kata-sambutan p-4 mb-4">
-      <img src="@/assets/images/bismillah.svg" class="w-50 mb-4" alt="" />
+    <div class="main-kata-sambutan p-4">
+      <img src="@/assets/images/bismillah.svg" class="mt-5 w-50 mb-4" alt="" />
       <p class="text-lg text-honey-carrot text-primary">
         Assalamual`aikum Wr. Wb.
       </p>
@@ -120,7 +124,7 @@
         alt=""
       />
       <p class="text-lg text-honey-carrot text-primary mt-3">
-        Septina Azrida, Amd.Farm., Apt.
+        Septina Azrida, Amd.Farm.
       </p>
       <p class="text-sm text-roboto">
         Putri Pertama dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina,
@@ -131,11 +135,51 @@
       </p>
       <img src="@/assets/images/decoration-photos.webp" class="w-50" alt="" />
       <p class="text-lg text-honey-carrot text-primary mt-3">
-        Saharuddin, M.Clin.Farm.
+        Apt. Saharuddin, M.Clin.Farm.
       </p>
-      <p class="text-sm text-roboto">
+      <p class="text-sm text-roboto mb-5">
         Putri Pertama dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
       </p>
+    </div>
+    <div class="main-acara">
+      <img src="@/assets/images/wave.png" class="w-100" alt="" />
+      <div class="bg-primary py-3 px-1">
+        <p class="text-honey-carrot text-xl m-0 text-secondary">Acara</p>
+      </div>
+
+      <div class="mt-4">
+        <div class="card-acara">
+          <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
+          <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
+          <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
+          <p class="text-sm text-roboto mb-1">
+            <em><sup>*</sup>hanya dihadiri Keluarga Besar</em>
+          </p>
+          <p class="text-sm text-roboto">
+            Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
+            KM.14
+          </p>
+        </div>
+        <div class="card-acara mt-4">
+          <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
+          <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
+          <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
+          <p class="text-sm text-roboto">
+            Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
+            KM.14
+          </p>
+        </div>
+        <div class="card-acara mt-4">
+          <p class="text-lg text-honey-carrot text-primary mb-1">Maps</p>
+          <a
+            class="btn bg-primary text-sm text-secondary"
+            href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
+            target="__blank"
+          >
+            Lihat Lokasi
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -288,7 +332,7 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background: url("../assets/images/background-1.png") no-repeat center
+    background: url("../assets/images/background-2.png") no-repeat center
       center/cover;
 
     &-doa {
@@ -304,7 +348,22 @@ export default {
     }
   }
   .main-kata-sambutan {
-    background: url("../assets/images/background-0.png");
+    background: url("../assets/images/background-1.png") center center/cover;
+  }
+
+  .main-acara {
+    background: url("../assets/images/background-2.png") no-repeat center
+      center/cover;
+    padding-bottom: 50px;
+    .card-acara {
+      padding: 20px 40px;
+      box-shadow: 0px 10px 30px -5px rgb(0 0 0 / 30%);
+      background: url("../assets/images/background-0.png") no-repeat center
+        center/cover;
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 26px;
+    }
   }
 }
 
@@ -340,6 +399,10 @@ export default {
 
 .text-primary {
   color: #ae8f7a !important;
+}
+
+.text-secondary {
+  color: #fef8f4 !important;
 }
 
 .text-ubuntu {
