@@ -312,7 +312,11 @@
         </div>
       </div>
 
-      <img src="@/assets/images/wave.png" class="w-100" alt="" />
+      <img
+        src="@/assets/images/wave.png"
+        class="position-relative bottom-0 start-50 translate-middle-x w-100"
+        alt=""
+      />
     </div>
   </div>
 
