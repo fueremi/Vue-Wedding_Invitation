@@ -521,7 +521,7 @@ export default {
         height: 300px;
       }
 
-      @media (min-height: 780px) {
+      @media (min-height: 760px) {
         height: 400px;
       }
 
