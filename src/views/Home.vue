@@ -117,12 +117,15 @@
         kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada
         saat resepsi dan memberikan Do’a Restu kepada kedua mempelai.
       </p>
-
-      <img
-        src="@/assets/images/decoration-photos.webp"
-        class="mt-4 w-50"
-        alt=""
-      />
+      <div class="position-relative my-5">
+        <img src="@/assets/images/pl.png" class="mt-4 w-25" alt="" />
+        <img
+          src="@/assets/images/decoration-photos.webp"
+          class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
+          alt=""
+        />
+      </div>
+      .
       <p class="text-lg text-honey-carrot text-primary mt-3">
         Septina Azrida, Amd.Farm.
       </p>
@@ -133,7 +136,14 @@
       <p class="text-xl text-honey-carrot text-primary my-4">
         &
       </p>
-      <img src="@/assets/images/decoration-photos.webp" class="w-50" alt="" />
+      <div class="position-relative my-5">
+        <img src="@/assets/images/tl.png" class="mt-4 w-25 decor" alt="" />
+        <img
+          src="@/assets/images/decoration-photos.webp"
+          class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
+          alt=""
+        />
+      </div>
       <p class="text-lg text-honey-carrot text-primary mt-3">
         Apt. Saharuddin, M.Clin.Farm.
       </p>
@@ -180,6 +190,130 @@
           </a>
         </div>
       </div>
+    </div>
+    <div class="main-ucapan pt-5">
+      <p class="text-honey-carrot text-lg text-primary">
+        Ucapkan Sesuatu
+      </p>
+      <p class="text-roboto text-sm">
+        Berikan Ucapan & Doa Restu
+      </p>
+      <div class="container">
+        <input
+          class="form-control form-control-sm w-75 mx-auto mb-3"
+          type="text"
+          placeholder="Nama"
+        />
+        <textarea
+          class="form-control form-control-sm w-75 mx-auto mb-3"
+          rows="3"
+          placeholder="Berikan Ucapan & Do'a Restu"
+        ></textarea>
+        <select class="form-select form-select-sm w-75 mx-auto mb-3">
+          <option class="text-muted" selected>Konfirmasi Kehadiran</option>
+          <option value="akan hadir">Akan Hadir</option>
+          <option value="tidak hadir">Tidak Hadir</option>
+        </select>
+        <div class="container">
+          <hr />
+          <div>
+            <div class="card-ucapan-wrapper">
+              <div class="card-ucapan mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <p class="text-sm text-start text-roboto m-0">
+                    Messy Triandani
+                  </p>
+                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    ><i class="fas fa-check"></i> Hadir</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                >
+                  <em
+                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
+                    keluarga Samawa Aamiin"</em
+                  >
+                </p>
+              </div>
+              <div class="card-ucapan mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <p class="text-sm text-start text-roboto m-0">
+                    Messy Triandani
+                  </p>
+                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    ><i class="fas fa-check"></i> Hadir</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                >
+                  <em
+                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
+                    keluarga Samawa Aamiin"</em
+                  >
+                </p>
+              </div>
+              <div class="card-ucapan mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <p class="text-sm text-start text-roboto m-0">
+                    Messy Triandani
+                  </p>
+                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    ><i class="fas fa-check"></i> Hadir</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                >
+                  <em
+                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
+                    keluarga Samawa Aamiin"</em
+                  >
+                </p>
+              </div>
+              <div class="card-ucapan mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <p class="text-sm text-start text-roboto m-0">
+                    Messy Triandani
+                  </p>
+                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    ><i class="fas fa-check"></i> Hadir</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                >
+                  <em
+                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
+                    keluarga Samawa Aamiin"</em
+                  >
+                </p>
+              </div>
+              <div class="card-ucapan mb-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                  <p class="text-sm text-start text-roboto m-0">
+                    Messy Triandani
+                  </p>
+                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    ><i class="fas fa-check"></i> Hadir</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                >
+                  <em
+                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
+                    keluarga Samawa Aamiin"</em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="@/assets/images/wave.png" class="w-100" alt="" />
     </div>
   </div>
 
@@ -365,6 +499,26 @@ export default {
       border-radius: 26px;
     }
   }
+
+  .main-ucapan {
+    background: url("../assets/images/background-1.png") center center/cover;
+    height: 100vh;
+
+    .card-ucapan-wrapper {
+      height: 340px;
+      overflow-y: scroll;
+      width: 80%;
+      margin: 0 auto;
+      .card-ucapan {
+        width: 90%;
+        padding: 10px 20px;
+        background: #fff;
+        // background: url("../assets/images/background-0.png") no-repeat center
+        //   center/cover;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .bg-primary {
@@ -415,6 +569,10 @@ export default {
 
 .text-roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.text-xs {
+  font-size: 0.5rem !important;
 }
 
 .text-sm {
@@ -486,7 +644,7 @@ export default {
 /* ----------------------------------------------
  * Generated by Animista on 2021-11-2 1:3:35
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
