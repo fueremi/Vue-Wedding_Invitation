@@ -314,7 +314,7 @@
 
       <img
         src="@/assets/images/wave.png"
-        class="position-relative bottom-0 start-50 translate-middle-x w-100"
+        class="position-absolute bottom-0 start-50 translate-middle-x w-100"
         alt=""
       />
     </div>
