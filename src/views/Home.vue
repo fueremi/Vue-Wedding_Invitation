@@ -230,8 +230,8 @@
                   class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                 >
                   <em
-                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
-                    keluarga Samawa Aamiin"</em
+                    >"Selamat menempuh hidup baru Septina & Suami, semoga
+                    menjadi keluarga Samawa Aamiin"</em
                   >
                 </p>
               </div>
@@ -248,8 +248,8 @@
                   class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                 >
                   <em
-                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
-                    keluarga Samawa Aamiin"</em
+                    >"Selamat menempuh hidup baru Septina & Suami, semoga
+                    menjadi keluarga Samawa Aamiin"</em
                   >
                 </p>
               </div>
@@ -266,8 +266,8 @@
                   class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                 >
                   <em
-                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
-                    keluarga Samawa Aamiin"</em
+                    >"Selamat menempuh hidup baru Septina & Suami, semoga
+                    menjadi keluarga Samawa Aamiin"</em
                   >
                 </p>
               </div>
@@ -284,8 +284,8 @@
                   class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                 >
                   <em
-                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
-                    keluarga Samawa Aamiin"</em
+                    >"Selamat menempuh hidup baru Septina & Suami, semoga
+                    menjadi keluarga Samawa Aamiin"</em
                   >
                 </p>
               </div>
@@ -302,8 +302,8 @@
                   class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                 >
                   <em
-                    >"Selamat menempuh hidup baru Nicko & Istri, semoga menjadi
-                    keluarga Samawa Aamiin"</em
+                    >"Selamat menempuh hidup baru Septina & Suami, semoga
+                    menjadi keluarga Samawa Aamiin"</em
                   >
                 </p>
               </div>
