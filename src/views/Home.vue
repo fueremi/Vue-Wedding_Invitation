@@ -35,7 +35,48 @@
     </div>
   </div>
   <div class="main" v-if="show">
-    <div class="main-content pb-5">
+    <nav class="menu">
+      <div
+        class="container-fluid d-flex justify-content-center align-items-center"
+      >
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">
+              <img
+                src="@/assets/images/menu-1.png"
+                style="height:40px; width:40px"
+                alt=""
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2"
+              ><img
+                src="@/assets/images/menu-2.png"
+                style="height:40px; width:40px"
+                alt=""
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3"
+              ><img
+                src="@/assets/images/menu-3.png"
+                style="height:40px; width:40px"
+                alt=""
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section4"
+              ><img
+                src="@/assets/images/menu-4.png"
+                style="height:40px; width:40px"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="main-content pb-5" id="section1">
       <button @click="onClickMuted" class="btn btn-muted">
         <i
           class="fas"
@@ -103,60 +144,124 @@
         </div>
       </div>
     </div>
-    <div class="main-kata-sambutan p-4">
-      <img src="@/assets/images/bismillah.svg" class="mt-5 w-50 mb-4" alt="" />
-      <p class="text-lg text-honey-carrot text-primary">
+    <div class="main-kata-sambutan p-4" id="section2">
+      <img
+        data-aos="zoom-in-down"
+        data-aos-duration="1500"
+        data-aos-once="true"
+        src="@/assets/images/bismillah.svg"
+        class="mt-5 w-50 mb-4"
+        alt=""
+      />
+      <p
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+        class="text-lg text-honey-carrot text-primary"
+      >
         Assalamual`aikum Wr. Wb.
       </p>
-      <p class="text-sm text-roboto">
+      <p
+        class="d-inline-block text-sm text-roboto"
+        data-aos="zoom-in-down"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta
         Kerabat sekalian untuk menghadiri acara pernikahan kami:
       </p>
-      <p class="text-sm text-roboto">
+      <p
+        class="text-sm text-roboto"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Dikarenakan PPKM di Kota Palembang, merupakan suatu kehormatan dan
         kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada
         saat resepsi dan memberikan Do’a Restu kepada kedua mempelai.
       </p>
-      <div class="position-relative my-5">
-        <img src="@/assets/images/pl.png" class="mt-4 w-25" alt="" />
+      <div
+        class="position-relative my-5"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
+        <img src="@/assets/images/pl.png" class="mt-3 w-25" alt="" />
         <img
-          src="@/assets/images/decoration-photos.png"
-          class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
+          src="@/assets/images/golden-wreath-png.png"
+          class="position-absolute top-50 start-50 translate-middle w-40 mt-3"
           alt=""
         />
       </div>
-      <p class="text-lg text-honey-carrot text-primary mt-3">
+      <p
+        class="text-lg text-honey-carrot text-primary mt-4"
+        data-aos="zoom-in-down"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Septina Azrida, Amd.Farm.
       </p>
-      <p class="text-sm text-roboto">
+      <p
+        class="text-sm text-roboto"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Putri Kedua dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina, S.Pd.
       </p>
-      <p class="text-xl text-honey-carrot text-primary my-4">
+      <p
+        class="text-xl text-honey-carrot text-primary my-4"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         &
       </p>
-      <div class="position-relative my-5">
-        <img src="@/assets/images/tl.png" class="mt-4 w-25 decor" alt="" />
+      <div
+        class="position-relative my-5"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
+        <img src="@/assets/images/tl.png" class="mt-3 w-25 decor" alt="" />
         <img
-          src="@/assets/images/decoration-photos.png"
-          class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
+          src="@/assets/images/golden-wreath-png.png"
+          class="position-absolute top-50 start-50 translate-middle w-40 mt-3"
           alt=""
         />
       </div>
-      <p class="text-lg text-honey-carrot text-primary mt-3">
+      <p
+        class="text-lg text-honey-carrot text-primary mt-3"
+        data-aos="zoom-in-down"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Apt. Saharuddin, M.Clin.Farm.
       </p>
-      <p class="text-sm text-roboto mb-5">
+      <p
+        class="text-sm text-roboto mb-5"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
       </p>
     </div>
-    <div class="main-acara">
+    <div class="main-acara" id="section3">
       <img src="@/assets/images/wave.png" class="w-100" alt="" />
       <div class="bg-primary py-3 px-1">
-        <p class="text-honey-carrot text-xl m-0 text-secondary">Acara</p>
+        <p class="text-honey-carrot text-xl m-0 text-secondary">
+          Acara
+        </p>
       </div>
 
       <div class="mt-4">
-        <div class="card-acara">
+        <div
+          class="card-acara"
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
           <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
           <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
           <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
@@ -168,7 +273,12 @@
             KM.14
           </p>
         </div>
-        <div class="card-acara mt-4">
+        <div
+          class="card-acara mt-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
           <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
           <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
           <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
@@ -177,10 +287,15 @@
             KM.14
           </p>
         </div>
-        <div class="card-acara mt-4">
+        <div
+          class="card-acara mt-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
           <p class="text-lg text-honey-carrot text-primary mb-1">Maps</p>
           <a
-            class="btn bg-primary text-sm text-secondary"
+            class="btn bg-primary text-sm text-secondary blink-1"
             href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
             target="__blank"
           >
@@ -189,7 +304,7 @@
         </div>
       </div>
     </div>
-    <div class="main-ucapan pt-5">
+    <div class="main-ucapan pt-5" id="section4">
       <p class="text-honey-carrot text-lg text-primary">
         Ucapkan Sesuatu
       </p>
@@ -197,6 +312,11 @@
         Berikan Ucapan & Doa Restu
       </p>
       <div class="container">
+        <select class="form-select form-select-sm w-75 mx-auto mb-3">
+          <option class="text-muted" selected>Konfirmasi Kehadiran</option>
+          <option value="akan hadir">Akan Hadir</option>
+          <option value="tidak hadir">Tidak Hadir</option>
+        </select>
         <input
           class="form-control form-control-sm w-75 mx-auto mb-3"
           type="text"
@@ -207,11 +327,9 @@
           rows="3"
           placeholder="Berikan Ucapan & Do'a Restu"
         ></textarea>
-        <select class="form-select form-select-sm w-75 mx-auto mb-3">
-          <option class="text-muted" selected>Konfirmasi Kehadiran</option>
-          <option value="akan hadir">Akan Hadir</option>
-          <option value="tidak hadir">Tidak Hadir</option>
-        </select>
+        <button class="btn bg-primary text-secondary btn-sm text-sm">
+          Submit
+        </button>
         <div class="container">
           <hr />
           <div>
@@ -310,12 +428,6 @@
           </div>
         </div>
       </div>
-
-      <img
-        src="@/assets/images/wave.png"
-        class="position-absolute bottom-0 start-50 translate-middle-x w-100"
-        alt=""
-      />
     </div>
   </div>
 
@@ -332,7 +444,7 @@
 
   <!-- Modal -->
   <div
-    class="modal fade"
+    class="modal zoom-in"
     id="staticBackdrop"
     data-bs-backdrop="static"
     data-bs-keyboard="false"
@@ -369,6 +481,8 @@
 <script>
 // path to file
 import Countdown from "@chenfengyuan/vue-countdown";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
   name: "App",
@@ -394,7 +508,7 @@ export default {
 
       document.getElementById("buttonProtokol").click();
       const audio = document.getElementById("audio");
-      audio.play();
+      // audio.play();
     },
     onClickMuted() {
       const audio = document.getElementById("audio");
@@ -403,6 +517,7 @@ export default {
     },
   },
   created() {
+    AOS.init();
     setTimeout(function() {
       document.getElementById("btn-undangan").style.visibility = "visible";
     }, 1600);
@@ -534,6 +649,10 @@ export default {
       }
     }
   }
+}
+
+.w-40 {
+  width: 45% !important;
 }
 
 .bg-primary {
@@ -769,5 +888,16 @@ export default {
   75% {
     opacity: 0;
   }
+}
+
+.menu {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 90%;
+  border-radius: 25px;
+  transform: translateX(-50%);
+  background: #ae8f7a;
+  z-index: 1000;
 }
 </style>
