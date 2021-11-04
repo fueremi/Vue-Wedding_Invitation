@@ -44,8 +44,8 @@
       </button>
       <div class="main-content-doa">
         <img
-          src="@/assets/images/decoration-1.webp"
-          class="decoration-header"
+          src="@/assets/images/decoration-1.png"
+          class="decoration-header mb-3"
           alt=""
         />
         <div class="content p-1">
@@ -58,8 +58,8 @@
           </p>
         </div>
         <img
-          src="@/assets/images/decoration-1.webp"
-          class="decoration-header"
+          src="@/assets/images/decoration-1.png"
+          class="decoration-header my-3"
           style="transform: rotate(180deg)"
           alt=""
         />
@@ -120,7 +120,7 @@
       <div class="position-relative my-5">
         <img src="@/assets/images/pl.png" class="mt-4 w-25" alt="" />
         <img
-          src="@/assets/images/decoration-photos.webp"
+          src="@/assets/images/decoration-photos.png"
           class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
           alt=""
         />
@@ -138,7 +138,7 @@
       <div class="position-relative my-5">
         <img src="@/assets/images/tl.png" class="mt-4 w-25 decor" alt="" />
         <img
-          src="@/assets/images/decoration-photos.webp"
+          src="@/assets/images/decoration-photos.png"
           class="position-absolute top-50 start-50 translate-middle w-50 mt-3"
           alt=""
         />
