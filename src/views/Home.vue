@@ -129,8 +129,7 @@
         Septina Azrida, Amd.Farm.
       </p>
       <p class="text-sm text-roboto">
-        Putri Pertama dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina,
-        S.Pd.
+        Putri Kedua dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina, S.Pd.
       </p>
       <p class="text-xl text-honey-carrot text-primary my-4">
         &
@@ -147,7 +146,7 @@
         Apt. Saharuddin, M.Clin.Farm.
       </p>
       <p class="text-sm text-roboto mb-5">
-        Putri Pertama dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
+        Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
       </p>
     </div>
     <div class="main-acara">
