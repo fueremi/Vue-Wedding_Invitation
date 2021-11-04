@@ -508,7 +508,7 @@ export default {
 
       document.getElementById("buttonProtokol").click();
       const audio = document.getElementById("audio");
-      // audio.play();
+      audio.play();
     },
     onClickMuted() {
       const audio = document.getElementById("audio");
