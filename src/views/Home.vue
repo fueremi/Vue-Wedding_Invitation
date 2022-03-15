@@ -313,7 +313,7 @@
       <div class="main-ucapan py-5" id="section4">
         <div class="mb-5">
           <p class="text-honey-carrot text-lg text-primary">
-            Dompet Digital
+            Amplop Digital
           </p>
 
           <div style="width: 95%;" class="mx-auto">

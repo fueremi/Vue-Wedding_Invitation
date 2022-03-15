@@ -32,15 +32,31 @@
     v-else
   >
     <h1 class="mb-5">Undangan</h1>
-    <form @submit.prevent="onLogin">
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="no hp ..." />
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="nama ..." />
-      </div>
-      <input type="submit" value="Sign In" class="btn btn-success mt-3" />
-    </form>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="no hp ..."
+        v-model="nohp"
+      />
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="nama ..." />
+    </div>
+    <button
+      type="button"
+      class="btn btn-success mt-3"
+      :disabled="nohp === '' || nohp === null || nama === '' || nama === null"
+    >
+      Share via WA Personal
+    </button>
+    <button
+      type="button"
+      class="btn btn-success mt-3"
+      :disabled="nama === '' || nama === null"
+    >
+      Copy Undangan
+    </button>
   </div>
 </template>
 
@@ -54,6 +70,8 @@ export default {
       isLogin: false,
       username: null,
       password: null,
+      nohp: null,
+      nama: null,
     };
   },
   methods: {
@@ -76,11 +94,14 @@ export default {
         Swal.fire({
           icon: "error",
           title: "Oops 😭",
-          html: `Salah <span style="text-decoration:underline">username</span> atay <span style="text-decoration:underline">password</span> itu kak! <br><small class="text-danger">Hubungi kak messy kalo mau tau passwordnya kak</small>`,
+          html: `Salah <span style="text-decoration:underline">username</span> atau <span style="text-decoration:underline">password</span> itu kak! <br><small class="text-danger">Hubungi kak messy kalo mau tau passwordnya kak</small>`,
         });
         return;
       }
 
+      this.username = null;
+      this.password = null;
+      this.isLogin = true;
       Swal.fire({
         icon: "success",
         title: "Halo 😁",
@@ -90,5 +111,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
