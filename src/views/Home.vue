@@ -180,7 +180,7 @@
         kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada
         saat resepsi dan memberikan Do’a Restu kepada kedua mempelai.
       </p>
-      <div
+      <!-- <div
         class="position-relative my-5"
         data-aos="zoom-in-up"
         data-aos-duration="1500"
@@ -192,7 +192,7 @@
           class="position-absolute top-50 start-50 translate-middle w-40 mt-3"
           alt=""
         />
-      </div>
+      </div> -->
       <p
         class="text-lg text-honey-carrot text-primary mt-4"
         data-aos="zoom-in-down"
@@ -217,7 +217,7 @@
       >
         &
       </p>
-      <div
+      <!-- <div
         class="position-relative my-5"
         data-aos="zoom-in-up"
         data-aos-duration="1500"
@@ -229,7 +229,7 @@
           class="position-absolute top-50 start-50 translate-middle w-40 mt-3"
           alt=""
         />
-      </div>
+      </div> -->
       <p
         class="text-lg text-honey-carrot text-primary mt-3"
         data-aos="zoom-in-down"
@@ -263,7 +263,7 @@
           data-aos-once="true"
         >
           <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
-          <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
+          <p class="text-md text-roboto mb-1">Sabtu, 11 Juni 2022</p>
           <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
           <p class="text-sm text-roboto mb-1">
             <em><sup>*</sup>hanya dihadiri Keluarga Besar</em>
@@ -272,6 +272,13 @@
             Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
             KM.14
           </p>
+          <a
+            class="btn bg-primary text-sm text-secondary blink-1"
+            href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
+            target="__blank"
+          >
+            Lihat Lokasi
+          </a>
         </div>
         <div
           class="card-acara mt-4"
@@ -280,20 +287,12 @@
           data-aos-once="true"
         >
           <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
-          <p class="text-md text-roboto mb-1">Minggu, 26 Desember 2021</p>
+          <p class="text-md text-roboto mb-1">Minggu, 12 Juni 2022</p>
           <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
           <p class="text-sm text-roboto">
-            Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
-            KM.14
+            Alamat: Jl. Adi Sucipto No. 3012, Talang Betutu, Palembang 30155
+            Gedung Diklat Penerbangan
           </p>
-        </div>
-        <div
-          class="card-acara mt-4"
-          data-aos="zoom-in-up"
-          data-aos-duration="1500"
-          data-aos-once="true"
-        >
-          <p class="text-lg text-honey-carrot text-primary mb-1">Maps</p>
           <a
             class="btn bg-primary text-sm text-secondary blink-1"
             href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
@@ -495,7 +494,7 @@ export default {
   computed: {
     dday() {
       return (
-        new Date("December 26, 2021 08:00:00").getTime() - new Date().getTime()
+        new Date("June 11, 2022 08:00:00").getTime() - new Date().getTime()
       );
     },
   },
