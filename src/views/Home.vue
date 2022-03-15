@@ -13,7 +13,7 @@
             Septina & Saharuddin
           </p>
           <p class="fade-in-bottom text-sm text-roboto fw-light">
-            <i class="fas fa-heart text-danger"></i> Minggu, 26 Desember 2021
+            <i class="fas fa-heart text-danger"></i> Minggu, 11 Juni 2022
             <i class="fas fa-heart text-danger"></i>
           </p>
           <div class="scale-in-bottom-1">
