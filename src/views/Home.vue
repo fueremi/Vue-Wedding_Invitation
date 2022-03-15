@@ -1,186 +1,190 @@
 <template>
-  <div class="screen-wrapper" :class="[show ? 'show' : '']">
-    <audio id="audio" loop>
-      <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
-    </audio>
-    <div class="card-wrapper">
-      <div class="text-center">
-        <p class="fade-in-top text-md text-uppercase text-roboto fw-light">
-          Undangan Pernikahan
-        </p>
-        <p class="scale-in-bottom text-xl text-honey-carrot">
-          Septina & Saharuddin
-        </p>
-        <p class="fade-in-bottom text-sm text-roboto fw-light">
-          <i class="fas fa-heart text-danger"></i> Minggu, 26 Desember 2021
-          <i class="fas fa-heart text-danger"></i>
-        </p>
-        <div class="scale-in-bottom-1">
-          <p class="text-md text-roboto">Dear</p>
-          <p class="text-md text-roboto">Messy Triandani</p>
-        </div>
-        <p class="text-sm fade-in-bottom-1 text-roboto">
-          Kami Mengundang Anda Untuk hadir Di Acara Pernikahan Kami.
-        </p>
-        <button
-          class="btn btn-primary btn-sm blink-1 badge rounded-pill mt-5"
-          style="visibility:hidden;"
-          @click="onClickBukaUndangan"
-          id="btn-undangan"
-        >
-          <img src="@/assets/images/love-letter.png" class="icon-love-letter" />
-          Buka Undangan
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="main" v-if="show">
-    <nav class="menu">
-      <div
-        class="container-fluid d-flex justify-content-center align-items-center"
-      >
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#section1">
-              <img
-                src="@/assets/images/menu-1.png"
-                style="height:40px; width:40px"
-                alt=""
-              />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section2"
-              ><img
-                src="@/assets/images/menu-2.png"
-                style="height:40px; width:40px"
-                alt=""
-            /></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section3"
-              ><img
-                src="@/assets/images/menu-3.png"
-                style="height:40px; width:40px"
-                alt=""
-            /></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section4"
-              ><img
-                src="@/assets/images/menu-4.png"
-                style="height:40px; width:40px"
-                alt=""
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="main-content pb-5" id="section1">
-      <button @click="onClickMuted" class="btn btn-muted">
-        <i
-          class="fas"
-          :class="[!muted ? 'fa-volume-up' : 'fa-volume-mute']"
-        ></i>
-      </button>
-      <div class="main-content-doa">
-        <img
-          src="@/assets/images/decoration-1.png"
-          class="decoration-header mb-3"
-          alt=""
-        />
-        <div class="content p-1">
-          <p class="text-md mb-0">
-            وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُونَ
+  <div style="max-width: 572px" class="mx-auto">
+    <div class="screen-wrapper" :class="[show ? 'show' : '']">
+      <audio id="audio" loop>
+        <source src="../assets/audio/backsound.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="card-wrapper">
+        <div class="text-center">
+          <p class="fade-in-top text-md text-uppercase text-roboto fw-light">
+            Undangan Pernikahan
           </p>
-          <p class="mt-3 mb-0 text-sm">
-            Artinya: “Dan segala sesuatu Kami Ciptakan Berpasang – pasangan
-            supaya kamu mengingat kebesaran Allah.”(Adz-Dzariyat ayat 49)
+          <p class="scale-in-bottom text-xl text-honey-carrot">
+            Septina & Saharuddin
           </p>
-        </div>
-        <img
-          src="@/assets/images/decoration-1.png"
-          class="decoration-header my-3"
-          style="transform: rotate(180deg)"
-          alt=""
-        />
-      </div>
-
-      <div class="main-content-hari">
-        <p class="text-sm text-roboto">Pernikahan dari:</p>
-        <p class="text-lg text-primary text-honey-carrot">
-          Setpina & Saharuddin
-        </p>
-        <p class="text-sm">
-          Kami harap Anda menjadi bagian dari hari istimewa kami!
-        </p>
-        <Countdown
-          :time="dday"
-          v-slot="{ days, hours, minutes, seconds }"
-          v-if="dday > 0"
-        >
-          <div class="d-flex justify-content-center gap-3">
-            <span class="badge rounded bg-primary text-sm py-1 px-3">
-              <p class="m-0 mb-1 text-md">{{ days }}</p>
-              <p class="m-0">Hari</p>
-            </span>
-            <span class="badge rounded bg-primary text-sm py-1 px-3">
-              <p class="m-0 mb-1 text-md">{{ hours }}</p>
-              <p class="m-0">Jam</p>
-            </span>
-            <span class="badge rounded bg-primary text-sm py-1 px-3">
-              <p class="m-0 mb-1 text-md">{{ minutes }}</p>
-              <p class="m-0">Menit</p>
-            </span>
-            <span class="badge rounded bg-primary text-sm py-1 px-3">
-              <p class="m-0 mb-1 text-md">{{ seconds }}</p>
-              <p class="m-0">Detik</p>
-            </span>
+          <p class="fade-in-bottom text-sm text-roboto fw-light">
+            <i class="fas fa-heart text-danger"></i> Minggu, 26 Desember 2021
+            <i class="fas fa-heart text-danger"></i>
+          </p>
+          <div class="scale-in-bottom-1">
+            <p class="text-md text-roboto">Dear</p>
+            <p class="text-md text-roboto">Messy Triandani</p>
           </div>
-        </Countdown>
-        <div class="text-lg text-honey-carrot" v-else>
-          Acara telah selesai <br />
-          Terima kasih atas partisipasi anda!
+          <p class="text-sm fade-in-bottom-1 text-roboto">
+            Kami Mengundang Anda Untuk hadir Di Acara Pernikahan Kami.
+          </p>
+          <button
+            class="btn btn-primary btn-sm blink-1 badge rounded-pill mt-5"
+            style="visibility:hidden;"
+            @click="onClickBukaUndangan"
+            id="btn-undangan"
+          >
+            <img
+              src="@/assets/images/love-letter.png"
+              class="icon-love-letter"
+            />
+            Buka Undangan
+          </button>
         </div>
       </div>
     </div>
-    <div class="main-kata-sambutan p-4" id="section2">
-      <img
-        data-aos="zoom-in-down"
-        data-aos-duration="1500"
-        data-aos-once="true"
-        src="@/assets/images/bismillah.svg"
-        class="mt-5 w-50 mb-4"
-        alt=""
-      />
-      <p
-        data-aos="zoom-in-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-        class="text-lg text-honey-carrot text-primary"
-      >
-        Assalamual`aikum Wr. Wb.
-      </p>
-      <p
-        class="d-inline-block text-sm text-roboto"
-        data-aos="zoom-in-down"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta
-        Kerabat sekalian untuk menghadiri acara pernikahan kami:
-      </p>
-      <p
-        class="text-sm text-roboto"
-        data-aos="zoom-in-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Dikarenakan PPKM di Kota Palembang, merupakan suatu kehormatan dan
-        kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada
-        saat resepsi dan memberikan Do’a Restu kepada kedua mempelai.
-      </p>
-      <!-- <div
+    <div class="main" style="max-width: 572px" v-if="show">
+      <nav class="menu" style="max-width: 572px">
+        <div
+          class="container-fluid d-flex justify-content-center align-items-center"
+        >
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">
+                <img
+                  src="@/assets/images/menu-1.png"
+                  style="height:40px; width:40px"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2"
+                ><img
+                  src="@/assets/images/menu-2.png"
+                  style="height:40px; width:40px"
+                  alt=""
+              /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3"
+                ><img
+                  src="@/assets/images/menu-3.png"
+                  style="height:40px; width:40px"
+                  alt=""
+              /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section4"
+                ><img
+                  src="@/assets/images/menu-4.png"
+                  style="height:40px; width:40px"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-content pb-5" id="section1">
+        <button @click="onClickMuted" class="btn btn-muted">
+          <i
+            class="fas"
+            :class="[!muted ? 'fa-volume-up' : 'fa-volume-mute']"
+          ></i>
+        </button>
+        <div class="main-content-doa">
+          <img
+            src="@/assets/images/decoration-1.png"
+            class="decoration-header mb-3"
+            alt=""
+          />
+          <div class="content p-1">
+            <p class="text-md mb-0">
+              وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُونَ
+            </p>
+            <p class="mt-3 mb-0 text-sm">
+              Artinya: “Dan segala sesuatu Kami Ciptakan Berpasang – pasangan
+              supaya kamu mengingat kebesaran Allah.”(Adz-Dzariyat ayat 49)
+            </p>
+          </div>
+          <img
+            src="@/assets/images/decoration-1.png"
+            class="decoration-header my-3"
+            style="transform: rotate(180deg)"
+            alt=""
+          />
+        </div>
+
+        <div class="main-content-hari">
+          <p class="text-sm text-roboto">Pernikahan dari:</p>
+          <p class="text-lg text-primary text-honey-carrot">
+            Setpina & Saharuddin
+          </p>
+          <p class="text-sm">
+            Kami harap Anda menjadi bagian dari hari istimewa kami!
+          </p>
+          <Countdown
+            :time="dday"
+            v-slot="{ days, hours, minutes, seconds }"
+            v-if="dday > 0"
+          >
+            <div class="d-flex justify-content-center gap-3">
+              <span class="badge rounded bg-primary text-sm py-1 px-3">
+                <p class="m-0 mb-1 text-md">{{ days }}</p>
+                <p class="m-0">Hari</p>
+              </span>
+              <span class="badge rounded bg-primary text-sm py-1 px-3">
+                <p class="m-0 mb-1 text-md">{{ hours }}</p>
+                <p class="m-0">Jam</p>
+              </span>
+              <span class="badge rounded bg-primary text-sm py-1 px-3">
+                <p class="m-0 mb-1 text-md">{{ minutes }}</p>
+                <p class="m-0">Menit</p>
+              </span>
+              <span class="badge rounded bg-primary text-sm py-1 px-3">
+                <p class="m-0 mb-1 text-md">{{ seconds }}</p>
+                <p class="m-0">Detik</p>
+              </span>
+            </div>
+          </Countdown>
+          <div class="text-lg text-honey-carrot" v-else>
+            Acara telah selesai <br />
+            Terima kasih atas partisipasi anda!
+          </div>
+        </div>
+      </div>
+      <div class="main-kata-sambutan p-4" id="section2">
+        <img
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+          data-aos-once="true"
+          src="@/assets/images/bismillah.svg"
+          class="mt-5 w-50 mb-4"
+          alt=""
+        />
+        <p
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+          class="text-lg text-honey-carrot text-primary"
+        >
+          Assalamual`aikum Wr. Wb.
+        </p>
+        <p
+          class="d-inline-block text-sm text-roboto"
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
+          serta Kerabat sekalian untuk menghadiri acara pernikahan kami:
+        </p>
+        <p
+          class="text-sm text-roboto"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          Dikarenakan PPKM di Kota Palembang, merupakan suatu kehormatan dan
+          kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada
+          saat resepsi dan memberikan Do’a Restu kepada kedua mempelai.
+        </p>
+        <!-- <div
         class="position-relative my-5"
         data-aos="zoom-in-up"
         data-aos-duration="1500"
@@ -193,31 +197,32 @@
           alt=""
         />
       </div> -->
-      <p
-        class="text-lg text-honey-carrot text-primary mt-4"
-        data-aos="zoom-in-down"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Septina Azrida, Amd.Farm.
-      </p>
-      <p
-        class="text-sm text-roboto"
-        data-aos="zoom-in-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Putri Kedua dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina, S.Pd.
-      </p>
-      <p
-        class="text-xl text-honey-carrot text-primary my-4"
-        data-aos="zoom-in-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        &
-      </p>
-      <!-- <div
+        <p
+          class="text-lg text-honey-carrot text-primary mt-4"
+          data-aos="zoom-in-down"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          Septina Azrida, Amd.Farm.
+        </p>
+        <p
+          class="text-sm text-roboto"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          Putri Kedua dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina,
+          S.Pd.
+        </p>
+        <p
+          class="text-xl text-honey-carrot text-primary my-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        >
+          &
+        </p>
+        <!-- <div
         class="position-relative my-5"
         data-aos="zoom-in-up"
         data-aos-duration="1500"
@@ -230,247 +235,248 @@
           alt=""
         />
       </div> -->
-      <p
-        class="text-lg text-honey-carrot text-primary mt-3"
-        data-aos="zoom-in-down"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Apt. Saharuddin, M.Clin.Farm.
-      </p>
-      <p
-        class="text-sm text-roboto mb-5"
-        data-aos="zoom-in-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
-      </p>
-    </div>
-    <div class="main-acara" id="section3">
-      <img src="@/assets/images/wave.png" class="w-100" alt="" />
-      <div class="bg-primary py-3 px-1">
-        <p class="text-honey-carrot text-xl m-0 text-secondary">
-          Acara
-        </p>
-      </div>
-
-      <div class="mt-4">
-        <div
-          class="card-acara"
+        <p
+          class="text-lg text-honey-carrot text-primary mt-3"
           data-aos="zoom-in-down"
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
-          <p class="text-md text-roboto mb-1">Sabtu, 11 Juni 2022</p>
-          <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
-          <p class="text-sm text-roboto mb-1">
-            <em><sup>*</sup>hanya dihadiri Keluarga Besar</em>
-          </p>
-          <p class="text-sm text-roboto">
-            Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
-            KM.14
-          </p>
-          <a
-            class="btn bg-primary text-sm text-secondary blink-1"
-            href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
-            target="__blank"
-          >
-            Lihat Lokasi
-          </a>
-        </div>
-        <div
-          class="card-acara mt-4"
+          Apt. Saharuddin, M.Clin.Farm.
+        </p>
+        <p
+          class="text-sm text-roboto mb-5"
           data-aos="zoom-in-up"
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
-          <p class="text-md text-roboto mb-1">Minggu, 12 Juni 2022</p>
-          <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
-          <p class="text-sm text-roboto">
-            Alamat: Jl. Adi Sucipto No. 3012, Talang Betutu, Palembang 30155
-            Gedung Diklat Penerbangan
+          Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
+        </p>
+      </div>
+      <div class="main-acara" id="section3">
+        <img src="@/assets/images/wave.png" class="w-100" alt="" />
+        <div class="bg-primary py-3 px-1">
+          <p class="text-honey-carrot text-xl m-0 text-secondary">
+            Acara
           </p>
-          <a
-            class="btn bg-primary text-sm text-secondary blink-1"
-            href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
-            target="__blank"
+        </div>
+
+        <div class="mt-4">
+          <div
+            class="card-acara"
+            data-aos="zoom-in-down"
+            data-aos-duration="1500"
+            data-aos-once="true"
           >
-            Lihat Lokasi
-          </a>
+            <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
+            <p class="text-md text-roboto mb-1">Sabtu, 11 Juni 2022</p>
+            <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
+            <p class="text-sm text-roboto mb-1">
+              <em><sup>*</sup>hanya dihadiri Keluarga Besar</em>
+            </p>
+            <p class="text-sm text-roboto">
+              Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
+              KM.14
+            </p>
+            <a
+              class="btn bg-primary text-sm text-secondary blink-1"
+              href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
+              target="__blank"
+            >
+              Lihat Lokasi
+            </a>
+          </div>
+          <div
+            class="card-acara mt-4"
+            data-aos="zoom-in-up"
+            data-aos-duration="1500"
+            data-aos-once="true"
+          >
+            <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
+            <p class="text-md text-roboto mb-1">Minggu, 12 Juni 2022</p>
+            <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
+            <p class="text-sm text-roboto">
+              Alamat: Jl. Adi Sucipto No. 3012, Talang Betutu, Palembang 30155
+              Gedung Diklat Penerbangan
+            </p>
+            <a
+              class="btn bg-primary text-sm text-secondary blink-1"
+              href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
+              target="__blank"
+            >
+              Lihat Lokasi
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="main-ucapan pt-5" id="section4">
-      <p class="text-honey-carrot text-lg text-primary">
-        Ucapkan Sesuatu
-      </p>
-      <p class="text-roboto text-sm">
-        Berikan Ucapan & Doa Restu
-      </p>
-      <div class="container">
-        <select class="form-select form-select-sm w-75 mx-auto mb-3">
-          <option class="text-muted" selected>Konfirmasi Kehadiran</option>
-          <option value="akan hadir">Akan Hadir</option>
-          <option value="tidak hadir">Tidak Hadir</option>
-        </select>
-        <input
-          class="form-control form-control-sm w-75 mx-auto mb-3"
-          type="text"
-          placeholder="Nama"
-        />
-        <textarea
-          class="form-control form-control-sm w-75 mx-auto mb-3"
-          rows="3"
-          placeholder="Berikan Ucapan & Do'a Restu"
-        ></textarea>
-        <button class="btn bg-primary text-secondary btn-sm text-sm">
-          Submit
-        </button>
+      <div class="main-ucapan py-5" id="section4">
+        <p class="text-honey-carrot text-lg text-primary">
+          Ucapkan Sesuatu
+        </p>
+        <p class="text-roboto text-sm">
+          Berikan Ucapan & Doa Restu
+        </p>
         <div class="container">
-          <hr />
-          <div>
-            <div class="card-ucapan-wrapper">
-              <div class="card-ucapan mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <p class="text-sm text-start text-roboto m-0">
-                    Messy Triandani
+          <select class="form-select form-select-sm w-75 mx-auto mb-3">
+            <option class="text-muted" selected>Konfirmasi Kehadiran</option>
+            <option value="akan hadir">Akan Hadir</option>
+            <option value="tidak hadir">Tidak Hadir</option>
+          </select>
+          <input
+            class="form-control form-control-sm w-75 mx-auto mb-3"
+            type="text"
+            placeholder="Nama"
+          />
+          <textarea
+            class="form-control form-control-sm w-75 mx-auto mb-3"
+            rows="3"
+            placeholder="Berikan Ucapan & Do'a Restu"
+          ></textarea>
+          <button class="btn bg-primary text-secondary btn-sm text-sm">
+            Submit
+          </button>
+          <div class="container">
+            <hr />
+            <div>
+              <div class="card-ucapan-wrapper">
+                <div class="card-ucapan mb-4 shadow-sm">
+                  <div class="d-flex align-items-center">
+                    <p class="text-sm text-start text-roboto m-0">
+                      Messy Triandani
+                    </p>
+                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                      ><i class="fas fa-check"></i> Hadir</span
+                    >
+                  </div>
+                  <p
+                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
+                  >
+                    <em
+                      >"Selamat menempuh hidup baru Septina & Suami, semoga
+                      menjadi keluarga Samawa Aamiin"</em
+                    >
                   </p>
-                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                    ><i class="fas fa-check"></i> Hadir</span
-                  >
                 </div>
-                <p
-                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                >
-                  <em
-                    >"Selamat menempuh hidup baru Septina & Suami, semoga
-                    menjadi keluarga Samawa Aamiin"</em
+                <div class="card-ucapan mb-4 shadow-sm">
+                  <div class="d-flex align-items-center">
+                    <p class="text-sm text-start text-roboto m-0">
+                      Messy Triandani
+                    </p>
+                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                      ><i class="fas fa-check"></i> Hadir</span
+                    >
+                  </div>
+                  <p
+                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                   >
-                </p>
-              </div>
-              <div class="card-ucapan mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <p class="text-sm text-start text-roboto m-0">
-                    Messy Triandani
+                    <em
+                      >"Selamat menempuh hidup baru Septina & Suami, semoga
+                      menjadi keluarga Samawa Aamiin"</em
+                    >
                   </p>
-                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                    ><i class="fas fa-check"></i> Hadir</span
-                  >
                 </div>
-                <p
-                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                >
-                  <em
-                    >"Selamat menempuh hidup baru Septina & Suami, semoga
-                    menjadi keluarga Samawa Aamiin"</em
+                <div class="card-ucapan mb-4 shadow-sm">
+                  <div class="d-flex align-items-center">
+                    <p class="text-sm text-start text-roboto m-0">
+                      Messy Triandani
+                    </p>
+                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                      ><i class="fas fa-check"></i> Hadir</span
+                    >
+                  </div>
+                  <p
+                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                   >
-                </p>
-              </div>
-              <div class="card-ucapan mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <p class="text-sm text-start text-roboto m-0">
-                    Messy Triandani
+                    <em
+                      >"Selamat menempuh hidup baru Septina & Suami, semoga
+                      menjadi keluarga Samawa Aamiin"</em
+                    >
                   </p>
-                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                    ><i class="fas fa-check"></i> Hadir</span
-                  >
                 </div>
-                <p
-                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                >
-                  <em
-                    >"Selamat menempuh hidup baru Septina & Suami, semoga
-                    menjadi keluarga Samawa Aamiin"</em
+                <div class="card-ucapan mb-4 shadow-sm">
+                  <div class="d-flex align-items-center">
+                    <p class="text-sm text-start text-roboto m-0">
+                      Messy Triandani
+                    </p>
+                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                      ><i class="fas fa-check"></i> Hadir</span
+                    >
+                  </div>
+                  <p
+                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                   >
-                </p>
-              </div>
-              <div class="card-ucapan mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <p class="text-sm text-start text-roboto m-0">
-                    Messy Triandani
+                    <em
+                      >"Selamat menempuh hidup baru Septina & Suami, semoga
+                      menjadi keluarga Samawa Aamiin"</em
+                    >
                   </p>
-                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                    ><i class="fas fa-check"></i> Hadir</span
-                  >
                 </div>
-                <p
-                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                >
-                  <em
-                    >"Selamat menempuh hidup baru Septina & Suami, semoga
-                    menjadi keluarga Samawa Aamiin"</em
+                <div class="card-ucapan mb-4 shadow-sm">
+                  <div class="d-flex align-items-center">
+                    <p class="text-sm text-start text-roboto m-0">
+                      Messy Triandani
+                    </p>
+                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                      ><i class="fas fa-check"></i> Hadir</span
+                    >
+                  </div>
+                  <p
+                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                   >
-                </p>
-              </div>
-              <div class="card-ucapan mb-4 shadow-sm">
-                <div class="d-flex align-items-center">
-                  <p class="text-sm text-start text-roboto m-0">
-                    Messy Triandani
+                    <em
+                      >"Selamat menempuh hidup baru Septina & Suami, semoga
+                      menjadi keluarga Samawa Aamiin"</em
+                    >
                   </p>
-                  <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                    ><i class="fas fa-check"></i> Hadir</span
-                  >
                 </div>
-                <p
-                  class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                >
-                  <em
-                    >"Selamat menempuh hidup baru Septina & Suami, semoga
-                    menjadi keluarga Samawa Aamiin"</em
-                  >
-                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Button trigger modal -->
-  <button
-    type="button"
-    class="btn btn-primary d-none"
-    data-bs-toggle="modal"
-    data-bs-target="#staticBackdrop"
-    id="buttonProtokol"
-  >
-    Launch static backdrop modal
-  </button>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary d-none"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+      id="buttonProtokol"
+    >
+      Launch static backdrop modal
+    </button>
 
-  <!-- Modal -->
-  <div
-    class="modal zoom-in"
-    id="staticBackdrop"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="staticBackdropLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <p class="text-md fw-bold">Protokol Kesehatan (Covid-19)</p>
-          <p class="text-sm">
-            Demi mendukung kesehatan bersama alangkah baiknya para tamu yang
-            akan hadir memenuhi protokol kesehatan sebagai berikut:
-          </p>
-          <img
-            src="@/assets/images/prokes-covid.jpg"
-            alt="Prokes Covid 19"
-            style="width: 100%;"
-          />
-          <button
-            type="button"
-            class="btn btn-primary text-sm mt-4"
-            data-bs-dismiss="modal"
-          >
-            Baik, Saya mengerti
-          </button>
+    <!-- Modal -->
+    <div
+      class="modal zoom-in"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="text-md fw-bold">Protokol Kesehatan (Covid-19)</p>
+            <p class="text-sm">
+              Demi mendukung kesehatan bersama alangkah baiknya para tamu yang
+              akan hadir memenuhi protokol kesehatan sebagai berikut:
+            </p>
+            <img
+              src="@/assets/images/prokes-covid.jpg"
+              alt="Prokes Covid 19"
+              style="width: 100%;"
+            />
+            <button
+              type="button"
+              class="btn btn-primary text-sm mt-4"
+              data-bs-dismiss="modal"
+            >
+              Baik, Saya mengerti
+            </button>
+          </div>
         </div>
       </div>
     </div>
