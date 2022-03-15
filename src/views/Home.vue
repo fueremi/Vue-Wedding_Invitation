@@ -19,7 +19,7 @@
           <div class="scale-in-bottom-1">
             <p class="text-md text-roboto">Dear</p>
             <p class="text-md text-roboto text-capitalize">
-              {{ to ? to : "" }}
+              {{ to ? to.replace(/\;/g, " ").replace(/\=/g, "&") : "" }}
             </p>
           </div>
           <p class="text-sm fade-in-bottom-1 text-roboto">
