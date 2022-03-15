@@ -18,7 +18,9 @@
           </p>
           <div class="scale-in-bottom-1">
             <p class="text-md text-roboto">Dear</p>
-            <p class="text-md text-roboto">Messy Triandani</p>
+            <p class="text-md text-roboto text-capitalize">
+              {{ to ? to : "" }}
+            </p>
           </div>
           <p class="text-sm fade-in-bottom-1 text-roboto">
             Kami Mengundang Anda Untuk hadir Di Acara Pernikahan Kami.
@@ -309,6 +311,25 @@
         </div>
       </div>
       <div class="main-ucapan py-5" id="section4">
+        <div class="mb-5">
+          <p class="text-honey-carrot text-lg text-primary">
+            Dompet Digital
+          </p>
+
+          <div style="width: 95%;" class="mx-auto">
+            <div
+              class="card-acara mt-4"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+            >
+              <img src="../assets/images/bni.png" class="w-50" alt="" />
+              <p class="text-md fw-bold text-roboto mb-1">1133391325</p>
+              <p class="text-sm text-roboto mb-1">an. Septina Azrida</p>
+            </div>
+          </div>
+        </div>
+
         <p class="text-honey-carrot text-lg text-primary">
           Ucapkan Sesuatu
         </p>
@@ -316,116 +337,64 @@
           Berikan Ucapan & Doa Restu
         </p>
         <div class="container">
-          <select class="form-select form-select-sm w-75 mx-auto mb-3">
-            <option class="text-muted" selected>Konfirmasi Kehadiran</option>
-            <option value="akan hadir">Akan Hadir</option>
-            <option value="tidak hadir">Tidak Hadir</option>
-          </select>
-          <input
-            class="form-control form-control-sm w-75 mx-auto mb-3"
-            type="text"
-            placeholder="Nama"
-          />
-          <textarea
-            class="form-control form-control-sm w-75 mx-auto mb-3"
-            rows="3"
-            placeholder="Berikan Ucapan & Do'a Restu"
-          ></textarea>
-          <button class="btn bg-primary text-secondary btn-sm text-sm">
-            Submit
-          </button>
+          <form @submit.prevent="onSendUcapan">
+            <select
+              class="form-select form-select-sm w-75 mx-auto mb-3"
+              v-model="konfirmasi"
+            >
+              <option :value="null" class="text-muted" selected
+                >Konfirmasi Kehadiran</option
+              >
+              <option :value="true">Akan Hadir</option>
+              <option :value="false">Tidak Hadir</option>
+            </select>
+            <input
+              class="form-control form-control-sm w-75 mx-auto mb-3"
+              type="text"
+              placeholder="Nama"
+              v-model="nama"
+            />
+            <textarea
+              class="form-control form-control-sm w-75 mx-auto mb-3"
+              rows="3"
+              placeholder="Berikan Ucapan & Do'a Restu"
+              v-model="ucapan"
+            ></textarea>
+            <input
+              type="submit"
+              class="btn bg-primary text-secondary btn-sm text-sm"
+            />
+          </form>
           <div class="container">
             <hr />
             <div>
               <div class="card-ucapan-wrapper">
-                <div class="card-ucapan mb-4 shadow-sm">
+                <div
+                  class="card-ucapan mb-4 shadow-sm"
+                  v-for="item in listUcapan"
+                  :key="item.id"
+                >
                   <div class="d-flex align-items-center">
-                    <p class="text-sm text-start text-roboto m-0">
-                      Messy Triandani
+                    <p
+                      class="text-sm text-start text-roboto text-capitalize m-0"
+                    >
+                      {{ item.nama }}
                     </p>
-                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
+                    <span
+                      class="ms-2 badge rounded-pill bg-primary text-xs"
+                      v-if="item.kk"
                       ><i class="fas fa-check"></i> Hadir</span
+                    >
+                    <span
+                      class="ms-2 badge rounded-pill bg-primary text-xs"
+                      v-else
+                      ><i class="fas fa-times"></i> Tidak Hadir</span
                     >
                   </div>
                   <p
                     class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
                   >
-                    <em
-                      >"Selamat menempuh hidup baru Septina & Suami, semoga
-                      menjadi keluarga Samawa Aamiin"</em
-                    >
-                  </p>
-                </div>
-                <div class="card-ucapan mb-4 shadow-sm">
-                  <div class="d-flex align-items-center">
-                    <p class="text-sm text-start text-roboto m-0">
-                      Messy Triandani
-                    </p>
-                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                      ><i class="fas fa-check"></i> Hadir</span
-                    >
-                  </div>
-                  <p
-                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                  >
-                    <em
-                      >"Selamat menempuh hidup baru Septina & Suami, semoga
-                      menjadi keluarga Samawa Aamiin"</em
-                    >
-                  </p>
-                </div>
-                <div class="card-ucapan mb-4 shadow-sm">
-                  <div class="d-flex align-items-center">
-                    <p class="text-sm text-start text-roboto m-0">
-                      Messy Triandani
-                    </p>
-                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                      ><i class="fas fa-check"></i> Hadir</span
-                    >
-                  </div>
-                  <p
-                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                  >
-                    <em
-                      >"Selamat menempuh hidup baru Septina & Suami, semoga
-                      menjadi keluarga Samawa Aamiin"</em
-                    >
-                  </p>
-                </div>
-                <div class="card-ucapan mb-4 shadow-sm">
-                  <div class="d-flex align-items-center">
-                    <p class="text-sm text-start text-roboto m-0">
-                      Messy Triandani
-                    </p>
-                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                      ><i class="fas fa-check"></i> Hadir</span
-                    >
-                  </div>
-                  <p
-                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                  >
-                    <em
-                      >"Selamat menempuh hidup baru Septina & Suami, semoga
-                      menjadi keluarga Samawa Aamiin"</em
-                    >
-                  </p>
-                </div>
-                <div class="card-ucapan mb-4 shadow-sm">
-                  <div class="d-flex align-items-center">
-                    <p class="text-sm text-start text-roboto m-0">
-                      Messy Triandani
-                    </p>
-                    <span class="ms-2 badge rounded-pill bg-primary text-xs"
-                      ><i class="fas fa-check"></i> Hadir</span
-                    >
-                  </div>
-                  <p
-                    class="text-sm text-roboto text-start mt-2 mb-1 text-justify"
-                  >
-                    <em
-                      >"Selamat menempuh hidup baru Septina & Suami, semoga
-                      menjadi keluarga Samawa Aamiin"</em
-                    >
+                    <em>"{{ item.ucapan }}"</em>
                   </p>
                 </div>
               </div>
@@ -485,6 +454,8 @@
 
 <script>
 // path to file
+import axios from "axios";
+import Swal from "sweetalert2";
 import Countdown from "@chenfengyuan/vue-countdown";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -493,8 +464,13 @@ export default {
   name: "App",
   data() {
     return {
+      konfirmasi: null,
+      nama: null,
+      ucapan: null,
       show: false,
       muted: false,
+      to: this.$route.params.nama,
+      listUcapan: null,
     };
   },
   computed: {
@@ -508,9 +484,52 @@ export default {
     Countdown,
   },
   methods: {
+    async onSendUcapan() {
+      const API_URL = "https://fueremi-hasura.herokuapp.com/v1/graphql";
+      const API_HEADERS = {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "18032405",
+      };
+      const API_QUERY = `
+      mutation MyMutation {
+        insert_ss_wedding(objects: {kk: ${this.konfirmasi}, nama: "${this.nama}", ucapan: "${this.ucapan}"}) {
+          affected_rows
+        }
+      }
+      `;
+      try {
+        const data = await axios.post(
+          API_URL,
+          { query: API_QUERY },
+          { headers: API_HEADERS }
+        );
+        if (data.data.data.insert_ss_wedding.affected_rows) {
+          Swal.fire({
+            icon: "success",
+            title: "Yeay...",
+            text: `Ucapan berhasil dikirim!`,
+          });
+          this.konfirmasi = null;
+          this.nama = null;
+          this.ucapan = null;
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: `Ucapan tidak berhasil dikirim!`,
+          });
+        }
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error}`,
+        });
+        return;
+      }
+    },
     onClickBukaUndangan() {
       this.show = true;
-
       document.getElementById("buttonProtokol").click();
       const audio = document.getElementById("audio");
       audio.play();
@@ -520,8 +539,41 @@ export default {
       this.muted = !this.muted;
       audio.muted = this.muted;
     },
+    async fetchingUcapan() {
+      const API_URL = "https://fueremi-hasura.herokuapp.com/v1/graphql";
+      const API_HEADERS = {
+        "Content-Type": "application/json",
+        "x-hasura-admin-secret": "18032405",
+      };
+      const API_QUERY = `
+      query MyQuery {
+        ss_wedding(order_by: {created_at: desc}) {
+          id
+          kk
+          nama
+          ucapan
+        }
+      }
+      `;
+      try {
+        const data = await axios.post(
+          API_URL,
+          { query: API_QUERY },
+          { headers: API_HEADERS }
+        );
+        return data.data.data.ss_wedding;
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error}`,
+        });
+        return;
+      }
+    },
   },
-  created() {
+  async created() {
+    this.listUcapan = await this.fetchingUcapan();
     AOS.init();
     setTimeout(function() {
       document.getElementById("btn-undangan").style.visibility = "visible";
@@ -625,6 +677,16 @@ export default {
   .main-ucapan {
     background: url("../assets/images/background-1.png") center center/cover;
     height: 100vh;
+
+    .card-acara {
+      padding: 20px 40px;
+      box-shadow: 0px 10px 30px -5px rgb(0 0 0 / 30%);
+      background: url("../assets/images/background-0.png") no-repeat center
+        center/cover;
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 26px;
+    }
 
     .card-ucapan-wrapper {
       height: 180px;
