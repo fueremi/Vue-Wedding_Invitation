@@ -300,7 +300,7 @@
             </p>
             <a
               class="btn bg-primary text-sm text-secondary blink-1"
-              href="https://www.google.com/maps/place/2%C2%B055'51.7%22S+104%C2%B039'52.7%22E/@-2.9310298,104.6624536,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-2.9310298!4d104.6646423?hl=en"
+              href="https://goo.gl/maps/J52r4phbNSeR7qCs5"
               target="__blank"
             >
               Lihat Lokasi
