@@ -379,7 +379,7 @@
               class="btn bg-primary text-secondary btn-sm text-sm"
             />
           </form>
-          <div class="container">
+          <div class="container" style="padding-bottom: 6rem;">
             <hr />
             <div>
               <div class="card-ucapan-wrapper">
