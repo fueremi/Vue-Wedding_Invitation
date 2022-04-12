@@ -199,6 +199,14 @@
           alt=""
         />
       </div> -->
+        <img
+          src="@/assets/images/woman.png"
+          alt="man"
+          style="width: 150px;"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        />
         <p
           class="text-lg text-honey-carrot text-primary mt-4"
           data-aos="zoom-in-down"
@@ -213,7 +221,7 @@
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          Putri Kedua dari Bapak Darmansyah A, S.P. <br />& Ibu Rosmalaina,
+          Putri Kedua dari Bapak Darmansyah A, SP. M.Si <br />& Ibu Rosmalaina,
           S.Pd.
         </p>
         <p
@@ -231,19 +239,22 @@
         data-aos-once="true"
       >
         <img src="@/assets/images/tl.png" class="mt-3 w-25 decor" alt="" />
-        <img
-          src="@/assets/images/golden-wreath-png.png"
-          class="position-absolute top-50 start-50 translate-middle w-40 mt-3"
-          alt=""
-        />
       </div> -->
+        <img
+          src="@/assets/images/man.png"
+          alt="man"
+          style="width: 150px;"
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+        />
         <p
           class="text-lg text-honey-carrot text-primary mt-3"
           data-aos="zoom-in-down"
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          Apt. Saharuddin, M.Clin.Farm.
+          Apt. Saharuddin, M.Clin.Pharm.
         </p>
         <p
           class="text-sm text-roboto mb-5"
@@ -251,7 +262,7 @@
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Sinar
+          Putra Ketiga dari Bapak Anwar (Alm.) <br />& Ibu Hj. Hajrah
         </p>
       </div>
       <div class="main-acara" id="section3">
@@ -271,13 +282,16 @@
           >
             <p class="text-lg text-honey-carrot text-primary">Akad Nikah</p>
             <p class="text-md text-roboto mb-1">Sabtu, 11 Juni 2022</p>
-            <p class="text-sm text-roboto mb-1">Pukul 08.00</p>
+            <p class="text-sm text-roboto mb-1">Pukul 09.30</p>
             <p class="text-sm text-roboto mb-1">
               <em><sup>*</sup>hanya dihadiri Keluarga Besar</em>
             </p>
             <p class="text-sm text-roboto">
               Alamat: Jl.Tanah Mas Komp.Azhar Permai Blok A2 No.5 RT.12 RW.04
               KM.14
+              <span style="font-style: italic;"
+                >(kediaman mempelai wanita)</span
+              >
             </p>
             <a
               class="btn bg-primary text-sm text-secondary blink-1"
