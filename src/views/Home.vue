@@ -10,10 +10,10 @@
             Undangan Pernikahan
           </p>
           <p class="scale-in-bottom text-xl text-honey-carrot">
-            Septina & Saharuddin
+            Tina & Sahar
           </p>
           <p class="fade-in-bottom text-sm text-roboto fw-light">
-            <i class="fas fa-heart text-danger"></i> Minggu, 11 Juni 2022
+            <i class="fas fa-heart text-danger"></i> Minggu, 12 Juni 2022
             <i class="fas fa-heart text-danger"></i>
           </p>
           <div class="scale-in-bottom-1">
@@ -115,7 +115,7 @@
         <div class="main-content-hari">
           <p class="text-sm text-roboto">Pernikahan dari:</p>
           <p class="text-lg text-primary text-honey-carrot">
-            Setpina & Saharuddin
+            Tina & Sahar
           </p>
           <p class="text-sm">
             Kami harap Anda menjadi bagian dari hari istimewa kami!
@@ -342,6 +342,18 @@
               <p class="text-sm text-roboto mb-1">an. Septina Azrida</p>
             </div>
           </div>
+          <div style="width: 95%;" class="mx-auto">
+            <div
+              class="card-acara mt-4"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+            >
+              <img src="../assets/images/bri.png" class="w-50 py-4" alt="" />
+              <p class="text-md fw-bold text-roboto mb-1">2158 0100 0866 532</p>
+              <p class="text-sm text-roboto mb-1">an. Saharuddin</p>
+            </div>
+          </div>
         </div>
 
         <p class="text-honey-carrot text-lg text-primary">
@@ -490,7 +502,7 @@ export default {
   computed: {
     dday() {
       return (
-        new Date("June 11, 2022 08:00:00").getTime() - new Date().getTime()
+        new Date("June 12, 2022 08:00:00").getTime() - new Date().getTime()
       );
     },
   },
