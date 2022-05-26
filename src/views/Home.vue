@@ -324,6 +324,79 @@
           </div>
         </div>
       </div>
+      <div class="main-kata-sambutan p-4">
+        <p
+          data-aos="zoom-in-up"
+          data-aos-duration="1500"
+          data-aos-once="true"
+          class="text-lg text-honey-carrot text-primary mt-4"
+        >
+          Gallery
+        </p>
+        <!-- Gallery -->
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-1.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Boat on Calm Water"
+            />
+
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-2.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Wintry Mountain Landscape"
+            />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-3.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Mountains in the Clouds"
+            />
+
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-4.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Boat on Calm Water"
+            />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-5.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Waves at Sea"
+            />
+
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-6.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Yosemite National Park"
+            />
+          </div>
+        </div>
+        <!-- Gallery -->
+      </div>
       <div class="main-ucapan py-5" id="section4">
         <div class="mb-5">
           <p class="text-honey-carrot text-lg text-primary">
@@ -496,7 +569,7 @@ export default {
       show: false,
       muted: false,
       to: this.$route.params.nama,
-      listUcapan: null,
+      listUcapan: null
     };
   },
   computed: {
@@ -504,17 +577,17 @@ export default {
       return (
         new Date("June 12, 2022 08:00:00").getTime() - new Date().getTime()
       );
-    },
+    }
   },
   components: {
-    Countdown,
+    Countdown
   },
   methods: {
     async onSendUcapan() {
       const API_URL = "https://fueremi-hasura.herokuapp.com/v1/graphql";
       const API_HEADERS = {
         "Content-Type": "application/json",
-        "x-hasura-admin-secret": "18032405",
+        "x-hasura-admin-secret": "18032405"
       };
       const API_QUERY = `
       mutation MyMutation {
@@ -533,7 +606,7 @@ export default {
           Swal.fire({
             icon: "success",
             title: "Yeay...",
-            text: `Ucapan berhasil dikirim!`,
+            text: `Ucapan berhasil dikirim!`
           });
           this.konfirmasi = null;
           this.nama = null;
@@ -542,14 +615,14 @@ export default {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: `Ucapan tidak berhasil dikirim!`,
+            text: `Ucapan tidak berhasil dikirim!`
           });
         }
       } catch (error) {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: `${error}`,
+          text: `${error}`
         });
         return;
       }
@@ -569,7 +642,7 @@ export default {
       const API_URL = "https://fueremi-hasura.herokuapp.com/v1/graphql";
       const API_HEADERS = {
         "Content-Type": "application/json",
-        "x-hasura-admin-secret": "18032405",
+        "x-hasura-admin-secret": "18032405"
       };
       const API_QUERY = `
       query MyQuery {
@@ -592,11 +665,11 @@ export default {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: `${error}`,
+          text: `${error}`
         });
         return;
       }
-    },
+    }
   },
   async created() {
     this.listUcapan = await this.fetchingUcapan();
@@ -604,7 +677,7 @@ export default {
     setTimeout(function() {
       document.getElementById("btn-undangan").style.visibility = "visible";
     }, 1600);
-  },
+  }
 };
 </script>
 
@@ -682,7 +755,7 @@ export default {
     }
   }
   .main-kata-sambutan {
-    background: url("../assets/images/background-1.png") center center/cover;
+    background: url("../assets/images/background-1.png") center top/contain;
   }
 
   .main-acara {
