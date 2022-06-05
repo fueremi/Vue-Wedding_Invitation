@@ -336,14 +336,14 @@
         <!-- Gallery -->
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img
+            <!-- <img
               data-aos="zoom-in-up"
               data-aos-duration="1500"
               data-aos-once="true"
               src="../assets/images/prawed-1.webp"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Boat on Calm Water"
-            />
+            /> -->
 
             <img
               data-aos="zoom-in-up"
@@ -360,22 +360,21 @@
               data-aos="zoom-in-up"
               data-aos-duration="1500"
               data-aos-once="true"
-              src="../assets/images/prawed-3.webp"
-              class="w-100 shadow-1-strong rounded mb-4"
-              alt="Mountains in the Clouds"
-            />
-
-            <img
-              data-aos="zoom-in-up"
-              data-aos-duration="1500"
-              data-aos-once="true"
               src="../assets/images/prawed-4.webp"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Boat on Calm Water"
             />
+            <img
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-once="true"
+              src="../assets/images/prawed-3.webp"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Mountains in the Clouds"
+            />
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0">
+          <!-- <div class="col-lg-4 mb-4 mb-lg-0">
             <img
               data-aos="zoom-in-up"
               data-aos-duration="1500"
@@ -393,7 +392,7 @@
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Yosemite National Park"
             />
-          </div>
+          </div> -->
         </div>
         <!-- Gallery -->
       </div>
