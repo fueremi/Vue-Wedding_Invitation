@@ -13,7 +13,7 @@
             Tina & Sahar
           </p>
           <p class="fade-in-bottom text-sm text-roboto fw-light">
-            <i class="fas fa-heart text-danger"></i> Minggu, 12 Juni 2022
+            <i class="fas fa-heart text-danger"></i> Sabtu, 25 Juni 2022
             <i class="fas fa-heart text-danger"></i>
           </p>
           <div class="scale-in-bottom-1">
@@ -322,6 +322,27 @@
               Lihat Lokasi
             </a>
           </div>
+          <div
+            class="card-acara mt-4"
+            data-aos="zoom-in-up"
+            data-aos-duration="1500"
+            data-aos-once="true"
+          >
+            <p class="text-lg text-honey-carrot text-primary">Resepsi</p>
+            <p class="text-md text-roboto mb-1">Sabtu, 25 Juni 2022</p>
+            <p class="text-sm text-roboto mb-1">Pukul 11.00</p>
+            <p class="text-sm text-roboto">
+              Alamat: Belakang Sekolah SD Inpres Bujung Lompo Desa Lasitae, Kec.
+              Tanete Rilau, Kab. Barru
+            </p>
+            <a
+              class="btn bg-primary text-sm text-secondary blink-1"
+              href="https://goo.gl/maps/J52r4phbNSeR7qCs5"
+              target="__blank"
+            >
+              Lihat Lokasi
+            </a>
+          </div>
         </div>
       </div>
       <div class="main-kata-sambutan p-4">
@@ -574,7 +595,7 @@ export default {
   computed: {
     dday() {
       return (
-        new Date("June 12, 2022 08:00:00").getTime() - new Date().getTime()
+        new Date("June 25, 2022 09:00:00").getTime() - new Date().getTime()
       );
     }
   },
